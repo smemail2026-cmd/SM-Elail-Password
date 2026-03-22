@@ -1,7 +1,25 @@
 {
   "class9_science_practice": [
-    { "email": "c9_sci_pt1@gmail.com", "used": false },
-    { "email": "c9_sci_pt2@gmail.com", "used": false }
+    { "email": "c9_sci_pt_G10EP1023@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP2045@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP3098@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP4123@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP5234@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP6345@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP7456@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP8567@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP9678@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP1789@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP2890@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP3901@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP4012@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP5123@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP6234@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP7345@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP8456@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP9567@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP1678@gmail.com", "used": false },
+    { "email": "c9_sci_pt_G10EP2789@gmail.com", "used": false }
   ],
   "class9_science_study": [
     { "email": "c9_sci_sm1@gmail.com", "used": false },
