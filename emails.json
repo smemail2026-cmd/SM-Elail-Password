@@ -44,8 +44,26 @@
     { "email": "c9_sci_sm_G10EP2468@gmail.com", "used": false }
   ],
   "class9_math_practice": [
-    { "email": "c9_math_pt1@gmail.com", "used": false },
-    { "email": "c9_math_pt2@gmail.com", "used": false }
+    { "email": "c9_math_pt_G10EP1111@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP2222@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP3333@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP4444@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP5555@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP6666@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP7777@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP8888@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP9999@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP1212@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP2323@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP3434@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP4545@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP5656@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP6767@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP7878@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP8989@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP9090@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP1478@gmail.com", "used": false },
+    { "email": "c9_math_pt_G10EP2589@gmail.com", "used": false }
   ],
   "class9_math_study": [
     { "email": "c9_math_sm1@gmail.com", "used": false },
