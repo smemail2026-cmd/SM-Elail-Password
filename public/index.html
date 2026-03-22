@@ -73,26 +73,112 @@ h2{
   font-weight:bold;
   margin-top:10px;
 }
-
   #message{
   white-space: pre-line;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+  display:flex;
+  gap:20px;
+}
+
+.left{
+  flex:3;
+}
+
+#rightPanel{
+  flex:1;
+  display:none;
+  flex-direction:column;
+  gap:10px;
+}
+
+.right-btn{
+  background:#8e44ad;
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.right-btn:hover{
+  background:#9b59b6;
+}
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
-
 <body>
 
 <h2>Email Access Portal</h2>
 
-<!-- CLASS BUTTONS -->
-<div class="class-grid">
-  <button class="class-btn" onclick="showClass('class9')">Class 9</button>
-  <button class="class-btn" onclick="showClass('class10')">Class 10</button>
-  <button class="class-btn" onclick="showClass('class11')">Class 11</button>
-  <button class="class-btn" onclick="showClass('class12')">Class 12</button>
-  <button class="class-btn" onclick="showClass('iitjee')">IIT-JEE</button>
-  <button class="class-btn" onclick="showClass('neet')">NEET</button>
+<div class="container">
+
+  <!-- LEFT SIDE (existing content) -->
+  <div class="left">
+
+    <!-- CLASS BUTTONS -->
+    <div class="class-grid">
+      <button class="class-btn" onclick="showClass('class9')">Class 9</button>
+      <button class="class-btn" onclick="showClass('class10')">Class 10</button>
+      <button class="class-btn" onclick="showClass('class11')">Class 11</button>
+      <button class="class-btn" onclick="showClass('class12')">Class 12</button>
+      <button class="class-btn" onclick="showClass('iitjee')">IIT-JEE</button>
+      <button class="class-btn" onclick="showClass('neet')">NEET</button>
+    </div>
+
+    <!-- SUBJECT BUTTONS -->
+    <div id="subjects" class="sub-grid"></div>
+
+    <p id="email"></p>
+    <p id="message"></p>
+
+  </div>
+
+  <!-- RIGHT SIDE PANEL -->
+  <div id="rightPanel">
+    <button class="right-btn" onclick="openLink('class9')">Class 9 </button>
+    <button class="right-btn" onclick="openLink('class10')">Class 10 </button>
+    <button class="right-btn" onclick="openLink('class11')">Class 11 </button>
+    <button class="right-btn" onclick="openLink('class12')">Class 12 </button>
+    <button class="right-btn" onclick="openLink('iitjee')">IIT-JEE </button>
+    <button class="right-btn" onclick="openLink('neet')">NEET</button>
+    <button class="right-btn" onclick="goHome()">🏠 Home</button>
+  </div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
 
 <!-- SUBJECT BUTTONS -->
 <div id="subjects" class="sub-grid"></div>
@@ -108,51 +194,51 @@ const classButtons = document.querySelectorAll(".class-btn");
 const data = {
   class9: [
     
-    {id:"class9_science_study", label:"Science – Study", type:"study"},
+    {id:"class9_science_study", label:"Science – Study Materials", type:"study"},
     
-    {id:"class9_math_study", label:"Math – Study", type:"study"},
+    {id:"class9_math_study", label:"Math – Study Materials", type:"study"},
   ],
   class10: [
     
-    {id:"class10_science_study", label:"Science – Study", type:"study"},
+    {id:"class10_science_study", label:"Science – Study Materials", type:"study"},
   
-    {id:"class10_math_study", label:"Math – Study", type:"study"},
+    {id:"class10_math_study", label:"Math – Study Materials", type:"study"},
   ],
   class11: [
     
-    {id:"class11_physics_study", label:"Physics – Study", type:"study"},
+    {id:"class11_physics_study", label:"Physics – Study Materials", type:"study"},
    
-    {id:"class11_chemistry_study", label:"Chemistry – Study", type:"study"},
+    {id:"class11_chemistry_study", label:"Chemistry – Study Materials", type:"study"},
    
-    {id:"class11_math_study", label:"Math – Study", type:"study"},
+    {id:"class11_math_study", label:"Math – Study Materials", type:"study"},
   
-    {id:"class11_biology_study", label:"Biology – Study", type:"study"},
+    {id:"class11_biology_study", label:"Biology – Study Materials", type:"study"},
   ],
   class12: [
   
-    {id:"class12_physics_study", label:"Physics – Study", type:"study"},
+    {id:"class12_physics_study", label:"Physics – Study Materials", type:"study"},
   
-    {id:"class12_chemistry_study", label:"Chemistry – Study", type:"study"},
+    {id:"class12_chemistry_study", label:"Chemistry – Study Materials", type:"study"},
   
-    {id:"class12_math_study", label:"Math – Study", type:"study"},
+    {id:"class12_math_study", label:"Math – Study Materials", type:"study"},
     
-    {id:"class12_biology_study", label:"Biology – Study", type:"study"},
+    {id:"class12_biology_study", label:"Biology – Study Materials", type:"study"},
   ],
   iitjee: [
     
-    {id:"iitjee_physics_study", label:"Physics – Study", type:"study"},
+    {id:"iitjee_physics_study", label:"Physics – Study Materials", type:"study"},
   
-    {id:"iitjee_chemistry_study", label:"Chemistry – Study", type:"study"},
+    {id:"iitjee_chemistry_study", label:"Chemistry – Study Materials", type:"study"},
    
-    {id:"iitjee_math_study", label:"Math – Study", type:"study"},
+    {id:"iitjee_math_study", label:"Math – Study Materials", type:"study"},
   ],
   neet: [
     
-    {id:"neet_physics_study", label:"Physics – Study", type:"study"},
+    {id:"neet_physics_study", label:"Physics – Study Materials", type:"study"},
    
-    {id:"neet_chemistry_study", label:"Chemistry – Study", type:"study"},
+    {id:"neet_chemistry_study", label:"Chemistry – Study Materials", type:"study"},
   
-    {id:"neet_biology_study", label:"Biology – Study", type:"study"},
+    {id:"neet_biology_study", label:"Biology – Study Materials", type:"study"},
   ]
 };
 
@@ -176,20 +262,47 @@ function getEmail(category){
   if(alreadyUsed) return;
 
   fetch(`https://sm-elail-password.onrender.com/email?category=${category}`)
+   
+  
+  
+  
+  
+  
     .then(r=>r.json())
     .then(d=>{
       document.getElementById("email").innerText = d.email || d.message;
-      document.getElementById("message").innerText =
-  "⚠️ You have permission for only one registered email.\n\n" +
-  "📌 Copy or note the password (email) immediately.\n" +
-  "⏳ After 5 minutes, self-destruction mode will activate and the password will disappear.\n" +
-  "📅 This password remains valid for 366 days (1 year).";
+    document.getElementById("message").innerHTML =
+  "⚠️ You have permission for only one registered email.<br><br>" +
+  "📌 Copy or note the password (email) immediately.<br>" +
+  "⏳ After 5 minutes, self-destruction mode will activate and the password will disappear.<br>" +
+  "📅 This password remains valid for 366 days (1 year).<br><br>" +
+  "<span style='color:blue; font-weight:bold;'>🔑 This email is your registered ID to open the E-Book (Study material) for your respective class.</span>";
 
       // 🔒 Disable ALL buttons
       document.querySelectorAll(".sub-btn").forEach(b=>b.disabled=true);
       classButtons.forEach(b=>b.disabled=true);
 
       alreadyUsed = true;
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  // ✅ SHOW RIGHT PANEL
+document.getElementById("rightPanel").style.display = "flex";
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 
       // ⏱ START TIMER AFTER EMAIL
       setTimeout(() => {
@@ -201,6 +314,47 @@ function getEmail(category){
       document.getElementById("message").innerText = "Server error";
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+function openLink(type){
+  // 👉 Put your real external links here
+  const links = {
+    class9: "https://gten-educational-platform.github.io/Class-12/class 9 button.html",
+    class10: "https://gten-educational-platform.github.io/Class-12/class 10 button.html",
+    class11: "https://gten-educational-platform.github.io/Class-12/Class 11 button.html",
+    class12: "https://gten-educational-platform.github.io/Class-12/class 12 button.html",
+    iitjee: "https://gten-educational-platform.github.io/Class-12/IIT JEE button.html",
+    neet: "https://gten-educational-platform.github.io/Class-12/https://example.com/neet"
+  };
+
+  window.open(links[type], "_blank");
+}
+
+function goHome(){
+  window.location.href = "https://www.g10educationalplatformindia.co.in/";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 
