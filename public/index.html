@@ -175,7 +175,7 @@ function showClass(cls){
 function getEmail(category){
   if(alreadyUsed) return;
 
-  fetch(`https://sm-practice-test-email.onrender.com/email?category=${category}`)
+  fetch(`https://sm-elail-password.onrender.com/email?category=${category}`)
     .then(r=>r.json())
     .then(d=>{
       document.getElementById("email").innerText = d.email || d.message;
